@@ -160,8 +160,6 @@ public class Indexer {
             {}
             catch(TikaException e)
             {}
-            
-            //metadata.set(Metadata.RESOURCE_NAME_KEY, file);
 	    // make a new, empty document
 	    Document doc = new Document();
 	    
