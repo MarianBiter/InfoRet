@@ -43,3 +43,7 @@ Temporary Items
 .apdisk
 Indexer/index
 *.class
+Indexer/build
+Indexer/dist
+Searcher/build
+Searcher/dist
