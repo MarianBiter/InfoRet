@@ -7,6 +7,8 @@ package indexer;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
+import org.apache.lucene.analysis.br.BrazilianAnalyzer;
+import org.apache.lucene.analysis.util.CharArraySet;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.LongField;
@@ -86,7 +88,8 @@ public class Indexer {
 	      System.out.println("Indexing to directory '" + indexPath + "'...");
 	
 	      Directory dir = FSDirectory.open(Paths.get(indexPath));
-	      RomanianAnalyzer analyzer = new RomanianAnalyzer(RomanianAnalyzer.getDefaultStopSet());
+	      //RomanianAnalyzer analyzer = new RomanianAnalyzer(RomanianAnalyzer.getDefaultStopSet());
+              RomanianAnalyzer analyzer = new RomanianAnalyzer();
               
 	      IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
 	

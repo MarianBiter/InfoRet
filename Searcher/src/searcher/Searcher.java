@@ -95,8 +95,8 @@ public class Searcher {
     
     IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(index)));
     IndexSearcher searcher = new IndexSearcher(reader);
-    Analyzer analyzer = new RomanianAnalyzer(RomanianAnalyzer.getDefaultStopSet());
-
+    //Analyzer analyzer = new RomanianAnalyzer(RomanianAnalyzer.getDefaultStopSet());
+    Analyzer analyzer = new RomanianAnalyzer();
     BufferedReader in = null;
     if (queries != null) {
       in = Files.newBufferedReader(Paths.get(queries), StandardCharsets.UTF_8);
