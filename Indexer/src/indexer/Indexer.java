@@ -28,6 +28,7 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.exception.TikaException;
+import indexer.RomanianFoldingAnalyzer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -88,8 +89,7 @@ public class Indexer {
 	      System.out.println("Indexing to directory '" + indexPath + "'...");
 	
 	      Directory dir = FSDirectory.open(Paths.get(indexPath));
-	      //RomanianAnalyzer analyzer = new RomanianAnalyzer(RomanianAnalyzer.getDefaultStopSet());
-              RomanianAnalyzer analyzer = new RomanianAnalyzer();
+              RomanianFoldingAnalyzer analyzer = new RomanianFoldingAnalyzer();
               
 	      IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
 	
