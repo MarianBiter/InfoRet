@@ -28,7 +28,7 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.exception.TikaException;
-import indexer.RomanianFoldingAnalyzer;
+import inforet.common.RomanianFoldingAnalyzer;
 
 import java.io.BufferedReader;
 import java.io.IOException;

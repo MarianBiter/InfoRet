@@ -42,7 +42,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.FSDirectory;
-import searcher.RomanianFoldingAnalyzer;
+import inforet.common.RomanianFoldingAnalyzer;
 
 /** Simple command-line based search demo. */
 public class Searcher {
