@@ -47,8 +47,5 @@ Indexer/build
 Indexer/dist
 Searcher/build
 Searcher/dist
-/Indexer/nbproject/private/
-/Searcher/nbproject/private/
-/Common/nbproject/private/
 /Common/dist/
 /Common/build/
