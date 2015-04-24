@@ -12,6 +12,7 @@ package inforet.common;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.Iterator;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
@@ -122,7 +123,20 @@ public final class RomanianFoldingAnalyzer extends StopwordAnalyzerBase {
     }
     TokenStream result = new StandardFilter(source);
     result = new LowerCaseFilter(result);
-    result = new StopFilter(result, stopwords);
+    CharArraySet doubleStop = new CharArraySet(stopwords.size()*2, true);
+    Iterator i = stopwords.iterator();
+    
+    while(i.hasNext())
+    {
+        Object obj = i.next();
+        char[] s = (char[])obj;
+        doubleStop.add(obj);
+        char[] output = new char[s.length];
+        int outputPos=0,length=0;
+        ASCIIFoldingFilter.foldToASCII(s, 0, output, outputPos, s.length);
+        doubleStop.add(output);
+    }
+    result = new StopFilter(result, doubleStop);
     result = new ASCIIFoldingFilter(result);
     if(!stemExclusionSet.isEmpty())
       result = new SetKeywordMarkerFilter(result, stemExclusionSet);
