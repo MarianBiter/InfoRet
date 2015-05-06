@@ -29,6 +29,7 @@ import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.exception.TikaException;
 import inforet.common.RomanianFoldingAnalyzer;
+import inforet.common.RomanianStemmerUpgraded;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -53,7 +54,12 @@ public class Indexer {
 	  /** Index all text files under a directory. */
 	  public static void main(String[] args) {
               
-             
+            RomanianStemmerUpgraded rs = new RomanianStemmerUpgraded();
+            //rs.setCurrent("prefaţă");
+            //rs.setCurrent("prefeţele");
+            rs.setCurrent("prefatei");
+            rs.stem();
+            String stemmedString  = rs.getCurrent();
 	    String usage = "java org.apache.lucene.demo.Indexer"
 	                 + " [-index INDEX_PATH] [-docs DOCS_PATH] [-update]\n\n"
 	                 + "This indexes the documents in DOCS_PATH, creating a Lucene index"
