@@ -57,7 +57,8 @@ public class Indexer {
             RomanianStemmerUpgraded rs = new RomanianStemmerUpgraded();
             //rs.setCurrent("prefaţă");
             //rs.setCurrent("prefeţele");
-            rs.setCurrent("prefatei");
+            //rs.setCurrent("capabilităţi");
+            rs.setCurrent("capabilitati");
             rs.stem();
             String stemmedString  = rs.getCurrent();
 	    String usage = "java org.apache.lucene.demo.Indexer"

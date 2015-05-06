@@ -137,10 +137,11 @@ public final class RomanianFoldingAnalyzer extends StopwordAnalyzerBase {
         doubleStop.add(output);
     }
     result = new StopFilter(result, doubleStop);
-    result = new ASCIIFoldingFilter(result);
     if(!stemExclusionSet.isEmpty())
-      result = new SetKeywordMarkerFilter(result, stemExclusionSet);
+        result = new SetKeywordMarkerFilter(result, stemExclusionSet);
     result = new SnowballFilter(result, new RomanianStemmerUpgraded());
+    result = new ASCIIFoldingFilter(result);
+
     return new TokenStreamComponents(source, result);
   }
 }

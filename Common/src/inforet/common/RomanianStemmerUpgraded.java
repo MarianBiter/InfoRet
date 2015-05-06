@@ -6,7 +6,6 @@
 package inforet.common;
 // This file was generated automatically by the Snowball to Java compiler
 
-
 import org.tartarus.snowball.Among;
 
  /**
@@ -53,52 +52,55 @@ private static final long serialVersionUID = 1L;
                 };
 
                 private final static Among a_2[] = {
-                    new Among ( "icala", -1, 4, "", methodObject ),
-                    new Among ( "iciva", -1, 4, "", methodObject ),
-                    new Among ( "ativa", -1, 5, "", methodObject ),
-                    new Among ( "itiva", -1, 6, "", methodObject ),
-                    new Among ( "icale", -1, 4, "", methodObject ),
-                    new Among ( "a\u0163iune", -1, 5, "", methodObject ),
-                    new Among ( "i\u0163iune", -1, 6, "", methodObject ),
-                    new Among ( "atoare", -1, 5, "", methodObject ),
-                    new Among ( "itoare", -1, 6, "", methodObject ),
-                    new Among ( "\u0103toare", -1, 5, "", methodObject ),
-                    new Among ( "icitate", -1, 4, "", methodObject ),
-                    new Among ( "abilitate", -1, 1, "", methodObject ),
-                    new Among ( "ibilitate", -1, 2, "", methodObject ),
-                    new Among ( "ivitate", -1, 3, "", methodObject ),
-                    new Among ( "icive", -1, 4, "", methodObject ),
-                    new Among ( "ative", -1, 5, "", methodObject ),
-                    new Among ( "itive", -1, 6, "", methodObject ),
-                    new Among ( "icali", -1, 4, "", methodObject ),
-                    new Among ( "atori", -1, 5, "", methodObject ),
-                    new Among ( "icatori", 18, 4, "", methodObject ),
-                    new Among ( "itori", -1, 6, "", methodObject ),
-                    new Among ( "\u0103tori", -1, 5, "", methodObject ),
-                    new Among ( "icitati", -1, 4, "", methodObject ),
-                    new Among ( "abilitati", -1, 1, "", methodObject ),
-                    new Among ( "ivitati", -1, 3, "", methodObject ),
-                    new Among ( "icivi", -1, 4, "", methodObject ),
-                    new Among ( "ativi", -1, 5, "", methodObject ),
-                    new Among ( "itivi", -1, 6, "", methodObject ),
-                    new Among ( "icit\u0103i", -1, 4, "", methodObject ),
-                    new Among ( "abilit\u0103i", -1, 1, "", methodObject ),
-                    new Among ( "ivit\u0103i", -1, 3, "", methodObject ),
-                    new Among ( "icit\u0103\u0163i", -1, 4, "", methodObject ),
-                    new Among ( "abilit\u0103\u0163i", -1, 1, "", methodObject ),
-                    new Among ( "ivit\u0103\u0163i", -1, 3, "", methodObject ),
-                    new Among ( "ical", -1, 4, "", methodObject ),
-                    new Among ( "ator", -1, 5, "", methodObject ),
-                    new Among ( "icator", 35, 4, "", methodObject ),
-                    new Among ( "itor", -1, 6, "", methodObject ),
-                    new Among ( "\u0103tor", -1, 5, "", methodObject ),
-                    new Among ( "iciv", -1, 4, "", methodObject ),
-                    new Among ( "ativ", -1, 5, "", methodObject ),
-                    new Among ( "itiv", -1, 6, "", methodObject ),
-                    new Among ( "ical\u0103", -1, 4, "", methodObject ),
-                    new Among ( "iciv\u0103", -1, 4, "", methodObject ),
-                    new Among ( "ativ\u0103", -1, 5, "", methodObject ),
-                    new Among ( "itiv\u0103", -1, 6, "", methodObject )
+                    new Among ( "icala", -1, 6, "", methodObject ),
+                    new Among ( "easa", -1, 1, "", methodObject ),
+                    new Among ( "iciva", -1, 6, "", methodObject ),
+                    new Among ( "ativa", -1, 7, "", methodObject ),
+                    new Among ( "itiva", -1, 8, "", methodObject ),
+                    new Among ( "icale", -1, 6, "", methodObject ),
+                    new Among ( "a\u0163iune", -1, 7, "", methodObject ),
+                    new Among ( "i\u0163iune", -1, 8, "", methodObject ),
+                    new Among ( "atoare", -1, 7, "", methodObject ),
+                    new Among ( "itoare", -1, 8, "", methodObject ),
+                    new Among ( "\u0103toare", -1, 7, "", methodObject ),
+                    new Among ( "icitate", -1, 6, "", methodObject ),
+                    new Among ( "abilitate", -1, 3, "", methodObject ),
+                    new Among ( "ibilitate", -1, 4, "", methodObject ),
+                    new Among ( "ivitate", -1, 5, "", methodObject ),
+                    new Among ( "icive", -1, 6, "", methodObject ),
+                    new Among ( "ative", -1, 7, "", methodObject ),
+                    new Among ( "itive", -1, 8, "", methodObject ),
+                    new Among ( "esei", -1, 2, "", methodObject ),
+                    new Among ( "icali", -1, 6, "", methodObject ),
+                    new Among ( "atori", -1, 7, "", methodObject ),
+                    new Among ( "icatori", 20, 6, "", methodObject ),
+                    new Among ( "itori", -1, 8, "", methodObject ),
+                    new Among ( "\u0103tori", -1, 7, "", methodObject ),
+                    new Among ( "icitati", -1, 6, "", methodObject ),
+                    new Among ( "abilitati", -1, 3, "", methodObject ),
+                    new Among ( "ivitati", -1, 5, "", methodObject ),
+                    new Among ( "icivi", -1, 6, "", methodObject ),
+                    new Among ( "ativi", -1, 7, "", methodObject ),
+                    new Among ( "itivi", -1, 8, "", methodObject ),
+                    new Among ( "icit\u0103i", -1, 6, "", methodObject ),
+                    new Among ( "abilit\u0103i", -1, 3, "", methodObject ),
+                    new Among ( "ivit\u0103i", -1, 5, "", methodObject ),
+                    new Among ( "icit\u0103\u0163i", -1, 6, "", methodObject ),
+                    new Among ( "abilit\u0103\u0163i", -1, 3, "", methodObject ),
+                    new Among ( "ivit\u0103\u0163i", -1, 5, "", methodObject ),
+                    new Among ( "ical", -1, 6, "", methodObject ),
+                    new Among ( "ator", -1, 7, "", methodObject ),
+                    new Among ( "icator", 37, 6, "", methodObject ),
+                    new Among ( "itor", -1, 8, "", methodObject ),
+                    new Among ( "\u0103tor", -1, 7, "", methodObject ),
+                    new Among ( "iciv", -1, 6, "", methodObject ),
+                    new Among ( "ativ", -1, 7, "", methodObject ),
+                    new Among ( "itiv", -1, 8, "", methodObject ),
+                    new Among ( "ical\u0103", -1, 6, "", methodObject ),
+                    new Among ( "eas\u0103", -1, 1, "", methodObject ),
+                    new Among ( "iciv\u0103", -1, 6, "", methodObject ),
+                    new Among ( "ativ\u0103", -1, 7, "", methodObject ),
+                    new Among ( "itiv\u0103", -1, 8, "", methodObject )
                 };
 
                 private final static Among a_3[] = {
@@ -718,7 +720,7 @@ private static final long serialVersionUID = 1L;
                     // [, line 89
                     ket = cursor;
                     // substring, line 89
-                    among_var = find_among_b(a_2, 46);
+                    among_var = find_among_b(a_2, 49);
                     if (among_var == 0)
                     {
                         return false;
@@ -736,36 +738,46 @@ private static final long serialVersionUID = 1L;
                             return false;
                         case 1:
                             // (, line 97
-                            // <-, line 98
-                            slice_from("abil");
+                            // delete, line 98
+                            slice_del();
                             break;
                         case 2:
                             // (, line 100
                             // <-, line 101
-                            slice_from("ibil");
+                            slice_from("eas\u0103");
                             break;
                         case 3:
                             // (, line 103
                             // <-, line 104
-                            slice_from("iv");
+                            slice_from("abil");
                             break;
                         case 4:
-                            // (, line 109
-                            // <-, line 110
-                            slice_from("ic");
+                            // (, line 106
+                            // <-, line 107
+                            slice_from("ibil");
                             break;
                         case 5:
-                            // (, line 114
-                            // <-, line 115
-                            slice_from("at");
+                            // (, line 109
+                            // <-, line 110
+                            slice_from("iv");
                             break;
                         case 6:
-                            // (, line 118
-                            // <-, line 119
+                            // (, line 115
+                            // <-, line 116
+                            slice_from("ic");
+                            break;
+                        case 7:
+                            // (, line 120
+                            // <-, line 121
+                            slice_from("at");
+                            break;
+                        case 8:
+                            // (, line 124
+                            // <-, line 125
                             slice_from("it");
                             break;
                     }
-                    // set standard_suffix_removed, line 122
+                    // set standard_suffix_removed, line 128
                     B_standard_suffix_removed = true;
                     cursor = limit - v_1;
                     return true;
@@ -774,15 +786,15 @@ private static final long serialVersionUID = 1L;
                 private boolean r_standard_suffix() {
             int among_var;
             int v_1;
-                    // (, line 126
-                    // unset standard_suffix_removed, line 127
+                    // (, line 132
+                    // unset standard_suffix_removed, line 133
                     B_standard_suffix_removed = false;
-                    // repeat, line 128
+                    // repeat, line 134
                     replab0: while(true)
                     {
                         v_1 = limit - cursor;
                         lab1: do {
-                            // call combo_suffix, line 128
+                            // call combo_suffix, line 134
                             if (!r_combo_suffix())
                             {
                                 break lab1;
@@ -792,49 +804,49 @@ private static final long serialVersionUID = 1L;
                         cursor = limit - v_1;
                         break replab0;
                     }
-                    // [, line 129
+                    // [, line 135
                     ket = cursor;
-                    // substring, line 129
+                    // substring, line 135
                     among_var = find_among_b(a_3, 63);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 129
+                    // ], line 135
                     bra = cursor;
-                    // call R2, line 129
+                    // call R2, line 135
                     if (!r_R2())
                     {
                         return false;
                     }
-                    // (, line 129
+                    // (, line 135
                     switch(among_var) {
                         case 0:
                             return false;
                         case 1:
-                            // (, line 145
-                            // delete, line 146
+                            // (, line 151
+                            // delete, line 152
                             slice_del();
                             break;
                         case 2:
-                            // (, line 148
-                            // literal, line 149
+                            // (, line 154
+                            // literal, line 155
                             if (!(eq_s_b(1, "\u0163")))
                             {
                                 return false;
                             }
-                            // ], line 149
+                            // ], line 155
                             bra = cursor;
-                            // <-, line 149
+                            // <-, line 155
                             slice_from("t");
                             break;
                         case 3:
-                            // (, line 152
-                            // <-, line 153
+                            // (, line 158
+                            // <-, line 159
                             slice_from("ist");
                             break;
                     }
-                    // set standard_suffix_removed, line 157
+                    // set standard_suffix_removed, line 163
                     B_standard_suffix_removed = true;
                     return true;
                 }
@@ -844,9 +856,9 @@ private static final long serialVersionUID = 1L;
             int v_1;
             int v_2;
             int v_3;
-                    // setlimit, line 161
+                    // setlimit, line 167
                     v_1 = limit - cursor;
-                    // tomark, line 161
+                    // tomark, line 167
                     if (cursor < I_pV)
                     {
                         return false;
@@ -855,25 +867,25 @@ private static final long serialVersionUID = 1L;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
-                    // (, line 161
-                    // [, line 162
+                    // (, line 167
+                    // [, line 168
                     ket = cursor;
-                    // substring, line 162
+                    // substring, line 168
                     among_var = find_among_b(a_4, 94);
                     if (among_var == 0)
                     {
                         limit_backward = v_2;
                         return false;
                     }
-                    // ], line 162
+                    // ], line 168
                     bra = cursor;
                     switch(among_var) {
                         case 0:
                             limit_backward = v_2;
                             return false;
                         case 1:
-                            // (, line 197
-                            // or, line 197
+                            // (, line 203
+                            // or, line 203
                             lab0: do {
                                 v_3 = limit - cursor;
                                 lab1: do {
@@ -884,19 +896,19 @@ private static final long serialVersionUID = 1L;
                                     break lab0;
                                 } while (false);
                                 cursor = limit - v_3;
-                                // literal, line 197
+                                // literal, line 203
                                 if (!(eq_s_b(1, "u")))
                                 {
                                     limit_backward = v_2;
                                     return false;
                                 }
                             } while (false);
-                            // delete, line 197
+                            // delete, line 203
                             slice_del();
                             break;
                         case 2:
-                            // (, line 211
-                            // delete, line 211
+                            // (, line 217
+                            // delete, line 217
                             slice_del();
                             break;
                     }
@@ -906,18 +918,18 @@ private static final long serialVersionUID = 1L;
 
                 private boolean r_vowel_suffix() {
             int among_var;
-                    // (, line 215
-                    // [, line 216
+                    // (, line 221
+                    // [, line 222
                     ket = cursor;
-                    // substring, line 216
+                    // substring, line 222
                     among_var = find_among_b(a_5, 5);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 216
+                    // ], line 222
                     bra = cursor;
-                    // call RV, line 216
+                    // call RV, line 222
                     if (!r_RV())
                     {
                         return false;
@@ -926,8 +938,8 @@ private static final long serialVersionUID = 1L;
                         case 0:
                             return false;
                         case 1:
-                            // (, line 217
-                            // delete, line 217
+                            // (, line 223
+                            // delete, line 223
                             slice_del();
                             break;
                     }
@@ -943,59 +955,59 @@ private static final long serialVersionUID = 1L;
             int v_6;
             int v_7;
             int v_8;
-                    // (, line 222
-                    // do, line 223
+                    // (, line 228
+                    // do, line 229
                     v_1 = cursor;
                     lab0: do {
-                        // call prelude, line 223
+                        // call prelude, line 229
                         if (!r_prelude())
                         {
                             break lab0;
                         }
                     } while (false);
                     cursor = v_1;
-                    // do, line 224
+                    // do, line 230
                     v_2 = cursor;
                     lab1: do {
-                        // call mark_regions, line 224
+                        // call mark_regions, line 230
                         if (!r_mark_regions())
                         {
                             break lab1;
                         }
                     } while (false);
                     cursor = v_2;
-                    // backwards, line 225
+                    // backwards, line 231
                     limit_backward = cursor; cursor = limit;
-                    // (, line 225
-                    // do, line 226
+                    // (, line 231
+                    // do, line 232
                     v_3 = limit - cursor;
                     lab2: do {
-                        // call step_0, line 226
+                        // call step_0, line 232
                         if (!r_step_0())
                         {
                             break lab2;
                         }
                     } while (false);
                     cursor = limit - v_3;
-                    // do, line 227
+                    // do, line 233
                     v_4 = limit - cursor;
                     lab3: do {
-                        // call standard_suffix, line 227
+                        // call standard_suffix, line 233
                         if (!r_standard_suffix())
                         {
                             break lab3;
                         }
                     } while (false);
                     cursor = limit - v_4;
-                    // do, line 228
+                    // do, line 234
                     v_5 = limit - cursor;
                     lab4: do {
-                        // (, line 228
-                        // or, line 228
+                        // (, line 234
+                        // or, line 234
                         lab5: do {
                             v_6 = limit - cursor;
                             lab6: do {
-                                // Boolean test standard_suffix_removed, line 228
+                                // Boolean test standard_suffix_removed, line 234
                                 if (!(B_standard_suffix_removed))
                                 {
                                     break lab6;
@@ -1003,7 +1015,7 @@ private static final long serialVersionUID = 1L;
                                 break lab5;
                             } while (false);
                             cursor = limit - v_6;
-                            // call verb_suffix, line 228
+                            // call verb_suffix, line 234
                             if (!r_verb_suffix())
                             {
                                 break lab4;
@@ -1011,20 +1023,20 @@ private static final long serialVersionUID = 1L;
                         } while (false);
                     } while (false);
                     cursor = limit - v_5;
-                    // do, line 229
+                    // do, line 235
                     v_7 = limit - cursor;
                     lab7: do {
-                        // call vowel_suffix, line 229
+                        // call vowel_suffix, line 235
                         if (!r_vowel_suffix())
                         {
                             break lab7;
                         }
                     } while (false);
                     cursor = limit - v_7;
-                    cursor = limit_backward;                    // do, line 231
+                    cursor = limit_backward;                    // do, line 237
                     v_8 = cursor;
                     lab8: do {
-                        // call postlude, line 231
+                        // call postlude, line 237
                         if (!r_postlude())
                         {
                             break lab8;
