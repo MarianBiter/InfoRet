@@ -30,19 +30,30 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Iterator;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.index.DocsEnum;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.search.Explanation;
+import org.apache.lucene.search.similarities.DefaultSimilarity;
+import org.apache.lucene.search.similarities.Similarity;
 import inforet.common.RomanianFoldingAnalyzer;
+import java.util.List;
+import org.apache.lucene.index.LeafReaderContext;
+import org.apache.lucene.search.DocIdSetIterator;
 
 /** Simple command-line based search demo. */
 public class Searcher {
@@ -135,7 +146,7 @@ public class Searcher {
         System.out.println("Time: "+(end.getTime()-start.getTime())+"ms");
       }
 
-      doPagingSearch(in, searcher, query, hitsPerPage, raw, queries == null && queryString == null);
+      doPagingSearch(in, searcher, query, hitsPerPage, raw, queries == null && queryString == null,reader);
 
       if (queryString != null) {
         break;
@@ -155,15 +166,66 @@ public class Searcher {
    * 
    */
   public static void doPagingSearch(BufferedReader in, IndexSearcher searcher, Query query, 
-                                     int hitsPerPage, boolean raw, boolean interactive) throws IOException {
+                                     int hitsPerPage, boolean raw, boolean interactive,IndexReader reader) throws IOException {
  
     // Collect enough docs to show 5 pages
     TopDocs results = searcher.search(query, 5 * hitsPerPage);
     ScoreDoc[] hits = results.scoreDocs;
+    Similarity sim = searcher.getSimilarity();
+    DefaultSimilarity defSim = (DefaultSimilarity)sim;
+    for(int i=0;i<hits.length;i++)
+    {
+       float documentScore = hits[i].score;
+       Document doc = searcher.doc(hits[i].doc);
+
+       String s = doc.get("path");
+       System.out.println(s + " has score:" + Float.toString(documentScore));
+    }
+
+
+//    Explanation exp = searcher.explain(query,0);
+//     System.out.println(exp.toString());
+//     exp = searcher.explain(query,1);
+//     System.out.println(exp.toString());
+
     
+    HashSet<Term> terms = new HashSet<>();
+    query.extractTerms(terms);
+    
+    Iterator<Term> iterator = terms.iterator();
+    while(iterator.hasNext())
+    {
+      Term term = (Term) iterator.next();
+      float idf  = defSim.idf(reader.docFreq(term), reader.numDocs());
+      if(reader.docFreq(term)>0)
+      {
+        String s = term.text();
+        System.out.println(s + " has IDF: " + Float.toString(idf));
+      }
+    }
+    
+    iterator = terms.iterator();
+    while(iterator.hasNext())
+    {
+        Term term = (Term) iterator.next();
+        List<LeafReaderContext> ls = reader.leaves();
+        LeafReaderContext context  = ls.get(0);
+        DocsEnum docsEnum = context.reader().termDocsEnum(term);
+        docsEnum.nextDoc();
+        while(docsEnum.docID() != DocIdSetIterator.NO_MORE_DOCS)
+        {
+            Document doc = searcher.doc(docsEnum.docID());
+            String path = doc.get("path");
+            float tf = defSim.tf(docsEnum.freq());
+            System.out.println("The term" + term.text() + " has TF: " + Float.toString(tf) + " in document: " + path);
+            docsEnum.nextDoc();
+        }
+        
+    }
+
     int numTotalHits = results.totalHits;
     System.out.println(numTotalHits + " total matching documents");
-
+    
     int start = 0;
     int end = Math.min(numTotalHits, hitsPerPage);
         
@@ -246,62 +308,3 @@ public class Searcher {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
