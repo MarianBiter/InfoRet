@@ -182,12 +182,7 @@ public class Searcher {
        System.out.println(s + " has score:" + Float.toString(documentScore));
     }
 
-
-//    Explanation exp = searcher.explain(query,0);
-//     System.out.println(exp.toString());
-//     exp = searcher.explain(query,1);
-//     System.out.println(exp.toString());
-
+    System.out.println("---------------------------------------------------------------");
     
     HashSet<Term> terms = new HashSet<>();
     query.extractTerms(terms);
@@ -204,6 +199,8 @@ public class Searcher {
       }
     }
     
+    System.out.println("---------------------------------------------------------------");
+    
     iterator = terms.iterator();
     while(iterator.hasNext())
     {
@@ -217,94 +214,94 @@ public class Searcher {
             Document doc = searcher.doc(docsEnum.docID());
             String path = doc.get("path");
             float tf = defSim.tf(docsEnum.freq());
-            System.out.println("The term" + term.text() + " has TF: " + Float.toString(tf) + " in document: " + path);
+            System.out.println("The term " + term.text() + " has TF: " + Float.toString(tf) + " in document: " + path);
             docsEnum.nextDoc();
         }
         
     }
 
-    int numTotalHits = results.totalHits;
-    System.out.println(numTotalHits + " total matching documents");
-    
-    int start = 0;
-    int end = Math.min(numTotalHits, hitsPerPage);
+//    int numTotalHits = results.totalHits;
+//    System.out.println(numTotalHits + " total matching documents");
+//    
+//    int start = 0;
+//    int end = Math.min(numTotalHits, hitsPerPage);
         
-    while (true) {
-      if (end > hits.length) {
-        System.out.println("Only results 1 - " + hits.length +" of " + numTotalHits + " total matching documents collected.");
-        System.out.println("Collect more (y/n) ?");
-        String line = in.readLine();
-        if (line.length() == 0 || line.charAt(0) == 'n') {
-          break;
-        }
-
-        hits = searcher.search(query, numTotalHits).scoreDocs;
-      }
-      
-      end = Math.min(hits.length, start + hitsPerPage);
-      
-      for (int i = start; i < end; i++) {
-        if (raw) {                              // output raw format
-          System.out.println("doc="+hits[i].doc+" score="+hits[i].score);
-          continue;
-        }
-
-        Document doc = searcher.doc(hits[i].doc);
-        String path = doc.get("path");
-        if (path != null) {
-          System.out.println((i+1) + ". " + path);
-          String title = doc.get("title");
-          if (title != null) {
-            System.out.println("   Title: " + doc.get("title"));
-          }
-        } else {
-          System.out.println((i+1) + ". " + "No path for this document");
-        }
-                  
-      }
-
-      if (!interactive || end == 0) {
-        break;
-      }
-
-      if (numTotalHits >= end) {
-        boolean quit = false;
-        while (true) {
-          System.out.print("Press ");
-          if (start - hitsPerPage >= 0) {
-            System.out.print("(p)revious page, ");  
-          }
-          if (start + hitsPerPage < numTotalHits) {
-            System.out.print("(n)ext page, ");
-          }
-          System.out.println("(q)uit or enter number to jump to a page.");
-          
-          String line = in.readLine();
-          if (line.length() == 0 || line.charAt(0)=='q') {
-            quit = true;
-            break;
-          }
-          if (line.charAt(0) == 'p') {
-            start = Math.max(0, start - hitsPerPage);
-            break;
-          } else if (line.charAt(0) == 'n') {
-            if (start + hitsPerPage < numTotalHits) {
-              start+=hitsPerPage;
-            }
-            break;
-          } else {
-            int page = Integer.parseInt(line);
-            if ((page - 1) * hitsPerPage < numTotalHits) {
-              start = (page - 1) * hitsPerPage;
-              break;
-            } else {
-              System.out.println("No such page");
-            }
-          }
-        }
-        if (quit) break;
-        end = Math.min(numTotalHits, start + hitsPerPage);
-      }
-    }
+//    while (true) {
+//      if (end > hits.length) {
+//        System.out.println("Only results 1 - " + hits.length +" of " + numTotalHits + " total matching documents collected.");
+//        System.out.println("Collect more (y/n) ?");
+//        String line = in.readLine();
+//        if (line.length() == 0 || line.charAt(0) == 'n') {
+//          break;
+//        }
+//
+//        hits = searcher.search(query, numTotalHits).scoreDocs;
+//      }
+//      
+//      end = Math.min(hits.length, start + hitsPerPage);
+//      
+//      for (int i = start; i < end; i++) {
+//        if (raw) {                              // output raw format
+//          System.out.println("doc="+hits[i].doc+" score="+hits[i].score);
+//          continue;
+//        }
+//
+//        Document doc = searcher.doc(hits[i].doc);
+//        String path = doc.get("path");
+//        if (path != null) {
+//          System.out.println((i+1) + ". " + path);
+//          String title = doc.get("title");
+//          if (title != null) {
+//            System.out.println("   Title: " + doc.get("title"));
+//          }
+//        } else {
+//          System.out.println((i+1) + ". " + "No path for this document");
+//        }
+//                  
+//      }
+//
+//      if (!interactive || end == 0) {
+//        break;
+//      }
+//
+//      if (numTotalHits >= end) {
+//        boolean quit = false;
+//        while (true) {
+//          System.out.print("Press ");
+//          if (start - hitsPerPage >= 0) {
+//            System.out.print("(p)revious page, ");  
+//          }
+//          if (start + hitsPerPage < numTotalHits) {
+//            System.out.print("(n)ext page, ");
+//          }
+//          System.out.println("(q)uit or enter number to jump to a page.");
+//          
+//          String line = in.readLine();
+//          if (line.length() == 0 || line.charAt(0)=='q') {
+//            quit = true;
+//            break;
+//          }
+//          if (line.charAt(0) == 'p') {
+//            start = Math.max(0, start - hitsPerPage);
+//            break;
+//          } else if (line.charAt(0) == 'n') {
+//            if (start + hitsPerPage < numTotalHits) {
+//              start+=hitsPerPage;
+//            }
+//            break;
+//          } else {
+//            int page = Integer.parseInt(line);
+//            if ((page - 1) * hitsPerPage < numTotalHits) {
+//              start = (page - 1) * hitsPerPage;
+//              break;
+//            } else {
+//              System.out.println("No such page");
+//            }
+//          }
+//        }
+//        if (quit) break;
+//        end = Math.min(numTotalHits, start + hitsPerPage);
+//      }
+//    }
   }
 }
